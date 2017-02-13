@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingLeft="8dp"
+              android:paddingRight="8dp">
+
+    <!-- 除了ListView和id为@id/android:empty的view之外，我们还可以任意添加view -->
+
+    <TextView
+            android:id="@+id/android:title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    <!-- id为@id/android:list的ListView为客户化的list布局，如果没有，则系统会调用默认的布局 -->
+
+    <ListView
+            android:id="@id/android:list"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.63"
+            android:background="#0099cc"
+            android:drawSelectorOnTop="false" >
+    </ListView>
+
+    <!-- 当ListView中没有数据时，id为@id/android:empty的view就会显示出来 -->
+
+    <TextView
+            android:id="@id/android:empty"
+            android:layout_width="match_parent"
+            android:layout_height="384dp"
+            android:layout_weight="9.40"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#FF0000" />
+
+    <Button
+            android:id="@+id/refresh_wifilist_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="refreshWifiList"
+            android:layout_gravity="center_vertical"
+    />
+
+</LinearLayout>
